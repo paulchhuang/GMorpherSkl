@@ -25,13 +25,11 @@ set( SRC src/Patching.cpp
 )
 
 INCLUDE_DIRECTORIES( include 
-					 ${libIndexedMesh_SOURCE_DIR}/include 
-                     ${libCC3D_SOURCE_DIR}/include
-					 ${EIGEN3_INCLUDE_DIR} )
+					${libCC3D_SOURCE_DIR}/include
+					${libIndexedMesh_SOURCE_DIR}/include 
+					${EIGEN3_INCLUDE_DIR} )
 
-LINK_LIBRARIES( IndexedMesh
-                CC3D
-                )
+LINK_LIBRARIES( CC3D IndexedMesh )
 ADD_LIBRARY( PatchedCloud STATIC ${SRC} )
 
 
