@@ -13,8 +13,7 @@ endif()
 
 set( SRC src/RigidMotion.cpp )
 
-INCLUDE_DIRECTORIES( include 
-                     ${libIndexedMesh_SOURCE_DIR}/include)					 
+INCLUDE_DIRECTORIES( include )					 
 
 ADD_LIBRARY( CC3D STATIC ${SRC} )
 
