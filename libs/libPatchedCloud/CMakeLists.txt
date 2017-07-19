@@ -25,9 +25,6 @@ set( SRC src/Patching.cpp
 )
 
 INCLUDE_DIRECTORIES( include 
-                     #${libKineben_SOURCE_DIR}/include
-					 #${libKinebenPP_SOURCE_DIR}/include
-					 #${libKinebenUtils_SOURCE_DIR}/include
 					 ${libIndexedMesh_SOURCE_DIR}/include 
                      ${libCC3D_SOURCE_DIR}/include
 					 ${EIGEN3_INCLUDE_DIR} )
