@@ -35,7 +35,8 @@ class Solver_EMCeres
 	           const std::vector<CC3D::float3>& obs_cloud_normals,
 	           std::vector<GMorpher::rigidT>&   RT,
 			   std::vector<CC3D::float3>&	    JX,	
-	           float&                           sigma);
+	           float&                           sigma, 
+			   bool								verbose = false);
 	
 
 	void setRefMesh( SklRgedPatchedCloud::PatchedCloud&           mesh);

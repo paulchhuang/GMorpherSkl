@@ -26,7 +26,8 @@ namespace GMorpher
 	int solve(int                    maxIter,	//ceres::Problem&		problem,
 			  const std::list<EPtrCeres>& energies,
 	          std::vector<rigidT>&   RT, 
-			  std::vector<float3>&	 JX);
+			  std::vector<float3>&	 JX,
+			  bool					 verbose = false);
 	// auxiliary function to transfer the type of JX
 	void float3Vector2floatArray(	const std::vector<float3>&	 JX,
 									double*   m_JX );

@@ -51,7 +51,8 @@ SolverCeres::~SolverCeres()
 int SolverCeres::solve(int                    maxIter,		//                 ceres::Problem&		problem,
 				  const std::list<EPtrCeres>& energies,
                   std::vector<rigidT>&   RT, 
-				  std::vector<float3>&	 JX)
+				  std::vector<float3>&	 JX, 
+				  bool					 verbose)
 {
 	
 	//assert( RT.size() == m_oadj_bounds.size() - 1);//small consistency check
@@ -101,8 +102,11 @@ int SolverCeres::solve(int                    maxIter,		//                 ceres
 	clock_t start = clock();
 	ceres::Solve(options, &problem, &summary);
 	clock_t stop = clock();
-	std::cout << "spend: " << (stop - start) << " ms, " << summary.iterations.size() - 1 << " interations on solving." << std::endl;	
-	std::cout << summary.FullReport() << "\n";
+	
+	if (verbose) {
+		std::cout << "spend: " << (stop - start) << " ms, " << summary.iterations.size() - 1 << " interations on solving." << std::endl;
+		std::cout << summary.FullReport() << "\n";
+	}
 
 
 	// --------------

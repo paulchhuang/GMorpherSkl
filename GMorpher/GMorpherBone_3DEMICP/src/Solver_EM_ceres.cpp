@@ -65,7 +65,8 @@ int Solver_EMCeres::solve(const std::list<GMorpher::EPtrCeres>& regularizationTe
                       const std::vector<CC3D::float3>& obs_cloud_normals,
                       std::vector<GMorpher::rigidT>&   RT,
 					  std::vector<CC3D::float3>&	   JX,	
-                      float&                           sigma)
+					  float&                           sigma,
+					  bool							   verbose)
 {
 	int numPatches = m_GSolver->numPatches();
 
@@ -102,8 +103,8 @@ int Solver_EMCeres::solve(const std::list<GMorpher::EPtrCeres>& regularizationTe
 		}
 
 		// M - Step
-		//std::cout << "# iter: " << numIter_EM << " ";
-		m_GSolver->solve(maxIter_M, energies, RT, JX);
+		if (verbose) std::cout << "# EM_iter.: " << numIter_EM << " ";
+		m_GSolver->solve(maxIter_M, energies, RT, JX, verbose);
 
 		// re-evaluate sigma
 		RigidTFlatten( RT, RTf );
