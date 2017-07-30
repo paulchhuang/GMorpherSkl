@@ -39,3 +39,19 @@ Please cite the following [IJCV paper](http://campar.in.tum.de/pub/huangc2016ijc
 
 ### Installation
 Please follow [this file](http://campar.in.tum.de/personal/huang/github/readme_v1.pdf) for further installation instruction.
+
+### Running the code
+You can run the program in command line like this:
+<code>&gt;&gt; GMorpherBone_3DEMICP.exe  -meshRef path2refModel (.off)
+                                         -meshBaseName "path2inputFolder\%04d.off"
+                                         -outBaseName "path2outputFolder\%04d"
+                                         -F 1 (first frame)
+                                         -L 173 (last frame)
+                                         -NThresh 0.5
+                                         -Eoutlier 0.01
+                                         -sigma0 4
+                                         -probabilistic 1 (consider soft assignments)
+                                         -prediction 1 (consider locations predicted from the neighboring patches)
+                                         -S 4 (patch size)
+                                         -EMF_ICP 5 (force for data term; bigger value means softer surfaces)
+</code>
