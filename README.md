@@ -37,8 +37,11 @@ Please cite the following [IJCV paper](http://campar.in.tum.de/pub/huangc2016ijc
     * `glut`: http://www.cs.uregina.ca/Links/class-info/315/WWW/Lab1/GLUT/windows.html</br>
 
 
+
 ### Installation:
 Please follow [this file](http://campar.in.tum.de/personal/huang/github/readme_v1.pdf) for further installation instruction.
+
+
 
 ### Running the code:
 You can run the program in command line like this: </br>
